@@ -1,0 +1,7 @@
+#!/bin/sh
+# -------
+# TODO: something better ...
+# --------
+
+killall gnome-screensaver || true
+exit 0

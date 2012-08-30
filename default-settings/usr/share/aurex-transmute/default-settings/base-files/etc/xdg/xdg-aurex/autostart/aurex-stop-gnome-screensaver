@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Stop GNOME3 screensaver
+Comment=Stop GNOME3 screensaver
+Exec=/usr/share/aurex-default-settigs/aurex-stop-gnome-screensaver
+Type=Application
+OnlyShowIn=XFCE;
+StartupNotify=false

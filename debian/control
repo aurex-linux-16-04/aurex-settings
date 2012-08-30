@@ -1,0 +1,19 @@
+Source: aurex-settings
+Section: admin
+Priority: optional
+Maintainer: Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+Build-Depends: debhelper (>= 7.0)
+Standards-Version: 3.8.4
+
+Package: aurex-default-settings
+Architecture: all
+Depends: ${misc:Depends}, dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf
+Recommends: xfce4-utils, nautilus, gnome-terminal, firefox, vlc, gthumb, rhythmbox
+Description: default settings for the aurex 12.04 desktop
+ This package contains the default settings used by aurex 12.04.
+
+Package: aurex-live-settings
+Architecture: all
+Depends: ${misc:Depends}, ubiquity, xfconf, casper
+Description: live session settings for aurex 12.04 
+ This package contains the required settings for aurex 12.04 live desktop

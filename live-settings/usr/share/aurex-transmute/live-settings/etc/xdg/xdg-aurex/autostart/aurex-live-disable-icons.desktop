@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=remove-icons
+Comment=remove-icons
+Exec=/usr/bin/aurex-remode-desktop-icons
+Type=Application
+OnlyShowIn=XFCE;
+StartupNotify=false

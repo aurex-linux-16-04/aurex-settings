@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Wallpaper sync GNOME3 -> XFCE
 Comment=Wallpaper sync GNOME3 -> XFCE
-Exec=/usr/share/aurex-default-settigs/aurex-wallpaper-sync
+Exec=/usr/share/aurex-default-settings/aurex-wallpaper-sync
 Type=Application
 OnlyShowIn=XFCE;
 StartupNotify=false

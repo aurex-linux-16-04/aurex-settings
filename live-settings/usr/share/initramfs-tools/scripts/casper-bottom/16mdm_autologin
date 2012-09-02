@@ -40,7 +40,7 @@ TimedLoginDelay=10"
         if ! `grep -qs '\[greeter\]' $MDMConfFile` ; then
             echo '[greeter]' >> $MDMConfFile
         fi
-        sed -i "s/\[greeter\]/\[greeter\]\n$MinimalUID=999/" $MDMConfFile
+        sed -i "s/\[greeter\]/\[greeter\]\nMinimalUID=999/" $MDMConfFile
     fi
 fi
 

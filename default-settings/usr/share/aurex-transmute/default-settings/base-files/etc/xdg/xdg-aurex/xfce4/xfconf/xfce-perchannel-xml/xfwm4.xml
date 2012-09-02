@@ -9,10 +9,10 @@
     <property name="use_compositing" type="bool" value="true"/>
     <property name="workspace_count" type="int" value="2"/>
     <property name="workspace_names" type="array">
-      <value type="string" value="1"/>
-      <value type="string" value="2"/>
-      <value type="string" value="3"/>
-      <value type="string" value="4"/>
+      <value type="string" value="aurex1"/>
+      <value type="string" value="aurex2"/>
+      <value type="string" value="aurex3"/>
+      <value type="string" value="aurex4"/>
     </property>
     <property name="activate_action" type="string" value="bring"/>
     <property name="box_move" type="bool" value="false"/>
@@ -57,5 +57,6 @@
     <property name="double_click_time" type="int" value="250"/>
     <property name="double_click_distance" type="int" value="5"/>
     <property name="mousewheel_rollup" type="bool" value="true"/>
+    <property name="tile_on_move" type="bool" value="false"/>
   </property>
 </channel>

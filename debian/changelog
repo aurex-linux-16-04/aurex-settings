@@ -1,3 +1,9 @@
+aurex-settings (12.04.16) precise; urgency=low
+
+  * Disable "tile_on_move"
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Sun, 02 Sep 2012 23:17:35 +0200
+
 aurex-settings (12.04.15) precise; urgency=low
 
   * Fixed aurex-custom-menu-title script

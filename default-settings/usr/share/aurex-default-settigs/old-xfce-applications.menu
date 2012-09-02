@@ -7,11 +7,10 @@
     <DefaultAppDirs/>
     <DefaultDirectoryDirs/>
     <DefaultMergeDirs/>
-    <Include>
-        <Category>X-Xfce-Toplevel</Category>
-    </Include>
+
     <Include>
         <Filename>exo-web-browser.desktop</Filename>
+        <Filename>exo-mail-reader.desktop</Filename>
         <Filename>ubuntu-software-center.desktop</Filename>
         <Filename>xfhelp4.desktop</Filename>
         <Filename>xfce4-about.desktop</Filename>
@@ -20,13 +19,40 @@
 
     <Layout>
         <Filename>exo-web-browser.desktop</Filename>
+        <Filename>exo-mail-reader.desktop</Filename>
+        <Separator/>
+        <Menuname>Settings</Menuname>
         <Separator/>
         <Merge type="all"/>
         <Separator/>
         <Filename>ubuntu-software-center.desktop</Filename>
         <Separator/>
+        <Filename>xfhelp4.desktop</Filename>
+        <Filename>xfce4-about.desktop</Filename>
         <Filename>xfce4-session-logout.desktop</Filename>
     </Layout>
+
+    <Menu>
+        <Name>Settings</Name>
+        <Directory>xfce-settings.directory</Directory>
+        <Include>
+            <Filename>xfce-settings-manager.desktop</Filename>
+            <Filename>xfce4-settings-editor.desktop</Filename>
+            <And>
+                <Category>Settings</Category>
+                <Not><Category>X-XFCE</Category></Not>
+                <Not><Category>X-XfceSettingsDialog</Category></Not>
+                <Not><Category>System</Category></Not>
+            </And>
+        </Include>
+
+        <Layout>
+            <Filename>xfce-settings-manager.desktop</Filename>
+            <Separator/>
+            <Merge type="all"/>
+        </Layout>
+    </Menu>
+
     <Menu>
         <Name>Accessories</Name>
         <Directory>xfce-accessories.directory</Directory>
@@ -116,6 +142,23 @@
         <Include>
             <Category>Office</Category>
         </Include>
+    </Menu>
+
+    <Menu>
+        <Name>System</Name>
+        <Directory>xfce-system.directory</Directory>
+        <Include>
+            <Or>
+                <Category>Emulator</Category>
+                <Category>System</Category>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>xfce4-session-logout.desktop</Filename>
+                <Filename>ubuntu-software-center.desktop</Filename>
+            </Or>
+        </Exclude>
     </Menu>
 
     <Menu>

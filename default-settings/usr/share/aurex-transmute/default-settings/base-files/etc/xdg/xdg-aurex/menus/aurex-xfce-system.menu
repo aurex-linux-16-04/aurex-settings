@@ -1,0 +1,62 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+    <Name>Xfce</Name>
+    <DefaultAppDirs/>
+    <DefaultDirectoryDirs/>
+    <DefaultMergeDirs/>
+    <Include>
+        <Category>X-Xfce-Toplevel</Category>
+    </Include>
+     <Include>
+        <Filename>xfhelp4.desktop</Filename>
+        <Filename>xfce4-about.desktop</Filename>
+    </Include>
+    <Layout>
+        <Filename>xfrun4.desktop</Filename>
+        <Filename>xfce4-run.desktop</Filename>
+        <Separator/>
+        <Filename>exo-terminal-emulator.desktop</Filename>
+        <Separator/>
+        <Menuname>Settings</Menuname>
+        <Menuname>System</Menuname>
+    </Layout>
+    <Menu>
+        <Name>Settings</Name>
+        <Directory>xfce-settings.directory</Directory>
+        <Include>
+            <Filename>xfce-settings-manager.desktop</Filename>
+            <Filename>xfce4-settings-editor.desktop</Filename>
+            <And>
+                <Category>Settings</Category>
+                <Not><Category>X-XFCE</Category></Not>
+                <Not><Category>X-XfceSettingsDialog</Category></Not>
+                <Not><Category>System</Category></Not>
+            </And>
+        </Include>
+
+        <Layout>
+            <Filename>xfce-settings-manager.desktop</Filename>
+            <Separator/>
+            <Merge type="all"/>
+        </Layout>
+    </Menu>
+    <Menu>
+        <Name>System</Name>
+        <Directory>xfce-system.directory</Directory>
+        <Include>
+            <Or>
+                <Category>Emulator</Category>
+                <Category>System</Category>
+            </Or>
+        </Include>
+        <Exclude>
+            <Or>
+                <Filename>xfce4-session-logout.desktop</Filename>
+                <Filename>ubuntu-software-center.desktop</Filename>
+            </Or>
+        </Exclude>
+    </Menu>
+ 
+</Menu>
+

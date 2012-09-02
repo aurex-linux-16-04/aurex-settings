@@ -1,0 +1,65 @@
+#!/bin/sh
+MNAME='System'
+MNAME_ar='نظامك'
+MNAME_ast='Sistema'
+MNAME_be='дастасаваньні'
+MNAME_bn='করুন'
+MNAME_ca='Sistema'
+MNAME_cs='Systému'
+MNAME_da='Systemet'
+MNAME_de='Starten'
+MNAME_el='σας'
+MNAME_en_GB='System'
+MNAME_es='Sistema'
+MNAME_et='Rakendus'
+MNAME_eu='Aplikazioak'
+MNAME_fi='Sovelluksia'
+MNAME_fr='Système'
+MNAME_gl='Sistema'
+MNAME_he='במחשבך'
+MNAME_hr='Sustavu'
+MNAME_hu='Indítása'
+MNAME_id='Anda'
+MNAME_is='Kerfinu'
+MNAME_it='Sistema'
+MNAME_ja='システムにインストールされたアプリケーションの検索および起動を行います'
+MNAME_kk='Oрындайды'
+MNAME_ko='실행합니다'
+MNAME_lt='Sistemoje'
+MNAME_lv='Sistēmā'
+MNAME_nb='Din'
+MNAME_nl='Systeem'
+MNAME_nn='Di'
+MNAME_pa='ਚਲਾਓ'
+MNAME_pl='Systemie'
+MNAME_pt='Sistema'
+MNAME_pt_BR='Sistema'
+MNAME_ro='Sistem'
+MNAME_ru='приложений'
+MNAME_si='කරන්න'
+MNAME_sk='Systéme'
+MNAME_sq='Tuaj'
+MNAME_sv='Dator'
+MNAME_te='ప్రారంభించు'
+MNAME_tr='Başlat'
+MNAME_ug='قىلىدۇ'
+MNAME_uk='Cистемі'
+MNAME_ur='چلائیں'
+MNAME_ur_PK='چلائیں'
+MNAME_vi='Bạn'
+MNAME_zh_CN='查找和启动在您系统上安装的应用程序'
+MNAME_zh_TW='尋找並啟動您系統上安裝的應用程式'
+
+l="_${LANG%.*}"
+MENU_NAME=""
+while [ -z "$MENU_NAME" ] ; do
+	VARNAME="MNAME$l"
+	MENU_NAME="$(eval "echo \$$VARNAME")"
+	l=${l%_*}
+done
+
+PLUGIN_ITEM="$(xfconf-query -c xfce4-panel -lv |sed -ne "/aurex-xfce-system.menu$/{s%custom-menu-file.*$%%;p}")"
+if [ "$PLUGIN_ITEM" ] ; then
+	xfconf-query -c xfce4-panel -p ${PLUGIN_ITEM}/button-title -s "$MENU_NAME" || true
+fi
+exit 0

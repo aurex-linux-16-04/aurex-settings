@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=aurex system menu title
+Comment=Localize the title in aurex system custom
+Exec=/usr/share/aurex-default-settigs/aurex-custom-menu-title
+Type=Application
+OnlyShowIn=XFCE;
+StartupNotify=false

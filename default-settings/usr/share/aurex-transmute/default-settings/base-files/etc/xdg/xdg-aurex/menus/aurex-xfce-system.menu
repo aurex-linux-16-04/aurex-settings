@@ -13,13 +13,11 @@
         <Filename>xfce4-about.desktop</Filename>
     </Include>
     <Layout>
-        <Filename>xfrun4.desktop</Filename>
-        <Filename>xfce4-run.desktop</Filename>
-        <Separator/>
-        <Filename>exo-terminal-emulator.desktop</Filename>
-        <Separator/>
         <Menuname>Settings</Menuname>
         <Menuname>System</Menuname>
+        <Separator/>
+        <Filename>xfhelp4.desktop</Filename>
+        <Filename>xfce4-about.desktop</Filename>
     </Layout>
     <Menu>
         <Name>Settings</Name>
@@ -30,7 +28,7 @@
             <And>
                 <Category>Settings</Category>
                 <Not><Category>X-XFCE</Category></Not>
-                <Not><Category>X-XfceSettingsDialog</Category></Not>
+                <Not><Category>X-XFCE-SettingsDialog</Category></Not>
                 <Not><Category>System</Category></Not>
             </And>
         </Include>

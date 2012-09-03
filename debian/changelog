@@ -1,3 +1,9 @@
+aurex-settings (12.04.18) precise; urgency=low
+
+  * Re-include exo-web-browser.desktop in menu (the panel launcher requires it)
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 03 Sep 2012 09:28:03 +0200
+
 aurex-settings (12.04.17) precise; urgency=low
 
   * Set aurex as default session for new users

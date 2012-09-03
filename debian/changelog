@@ -1,3 +1,9 @@
+aurex-settings (12.04.17) precise; urgency=low
+
+  * Set aurex as default session for new users
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 03 Sep 2012 08:52:28 +0200
+
 aurex-settings (12.04.16) precise; urgency=low
 
   * Disable "tile_on_move"

@@ -57,7 +57,13 @@ while [ -z "$MENU_NAME" ] ; do
 	MENU_NAME="$(eval "echo \$$VARNAME")"
 	l=${l%_*}
 done
-
+# first run check
+MAX_TIME=5
+COUNT_TIME=0
+while [ ! -d "$home/.config" ] && [ $COUNT_TIME -le $MAX_TIME ] ; do
+	sleep 1
+	COUNT_TIME=$((COUNT_TIME + 1))
+done
 PLUGIN_ITEM="$(xfconf-query -c xfce4-panel -lv |sed -ne "/aurex-xfce-system.menu$/{s%custom-menu-file.*$%%;p}")"
 if [ "$PLUGIN_ITEM" ] ; then
 	xfconf-query -c xfce4-panel -n -t string -p ${PLUGIN_ITEM}button-title -s "$MENU_NAME" || true

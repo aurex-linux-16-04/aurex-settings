@@ -60,6 +60,6 @@ done
 
 PLUGIN_ITEM="$(xfconf-query -c xfce4-panel -lv |sed -ne "/aurex-xfce-system.menu$/{s%custom-menu-file.*$%%;p}")"
 if [ "$PLUGIN_ITEM" ] ; then
-	xfconf-query -c xfce4-panel -n -t string -p ${PLUGIN_ITEM}/button-title -s "$MENU_NAME" || true
+	xfconf-query -c xfce4-panel -n -t string -p ${PLUGIN_ITEM}button-title -s "$MENU_NAME" || true
 fi
 exit 0

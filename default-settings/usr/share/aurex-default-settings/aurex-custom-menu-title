@@ -58,7 +58,7 @@ while [ -z "$MENU_NAME" ] ; do
 	l=${l%_*}
 done
 # first run check
-MAX_TIME=5
+MAX_TIME=8
 COUNT_TIME=0
 while [ ! -d "$home/.config" ] && [ $COUNT_TIME -le $MAX_TIME ] ; do
 	sleep 1

@@ -1,3 +1,10 @@
+aurex-settings (12.04.22) UNRELEASED; urgency=low
+
+  * Fix kill-gnome-screensaver desktop file
+  * Initialize user's .gtk-bookmarks file (places applet requires it)
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 18 Sep 2012 01:35:08 +0200
+
 aurex-settings (12.04.21) precise; urgency=low
 
   * aurex-custom-menu-title startup delay increased

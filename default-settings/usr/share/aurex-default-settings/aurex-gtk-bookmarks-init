@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# sed -ne "/^XDG/{s%\"%%g;s%^.*=%%;s%\$HOME%file://$HOME%;p}"
+

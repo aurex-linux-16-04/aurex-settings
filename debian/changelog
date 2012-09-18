@@ -1,4 +1,4 @@
-aurex-settings (12.04.22) UNRELEASED; urgency=low
+aurex-settings (12.04.22) precise; urgency=low
 
   * Fix kill-gnome-screensaver desktop file
   * Initialize user's .gtk-bookmarks file (places applet requires it)

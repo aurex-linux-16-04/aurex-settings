@@ -1,4 +1,19 @@
 #!/bin/sh
+[ -r $HOME/.config/user-dirs.dirs ] || exit 0
 
-# sed -ne "/^XDG/{s%\"%%g;s%^.*=%%;s%\$HOME%file://$HOME%;p}"
+GT_BM_FILE="$HOME/.gtk-bookmarks"
+
+[ "$1" != "--force" ] || rm -f $GT_BM_FILE
+[ ! -e "$GT_BM_FILE" ] || exit 0
+
+. $HOME/.config/user-dirs.dirs
+BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XDG_DOWNLOAD_DIR"
+
+# TODO: Find a better way to do this task ...
+BM_LIST="$BM_LIST $HOME/MisDocumentos_Servidor $HOME/Publico_Servidor $HOME/Departamentos"
+
+for b in $BM_LIST ; do
+	[ ! -d "$b" ] echo "file://$b" >> $GT_BM_FILE
+done
+exit 0
 

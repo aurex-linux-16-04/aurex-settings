@@ -4,7 +4,9 @@
 GT_BM_FILE="$HOME/.gtk-bookmarks"
 
 [ "$1" != "--force" ] || rm -f $GT_BM_FILE
-[ ! -e "$GT_BM_FILE" ] || exit 0
+if [ -e "$GT_BM_FILE" ] && [ -s "$GT_BM_FILE" ] ; then
+	exit 0
+fi
 
 . $HOME/.config/user-dirs.dirs
 BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XDG_DOWNLOAD_DIR"
@@ -13,7 +15,7 @@ BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XD
 BM_LIST="$BM_LIST $HOME/MisDocumentos_Servidor $HOME/Publico_Servidor $HOME/Departamentos"
 
 for b in $BM_LIST ; do
-	[ ! -d "$b" ] echo "file://$b" >> $GT_BM_FILE
+	[ ! -d "$b" ] || echo "file://$b" >> $GT_BM_FILE
 done
 exit 0
 

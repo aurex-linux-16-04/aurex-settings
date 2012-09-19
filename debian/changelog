@@ -1,3 +1,9 @@
+aurex-settings (12.04.23) precise; urgency=low
+
+  * Added nautilus-connect-server as server_connect_cmd in places applet configuration
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 19 Sep 2012 02:14:50 +0200
+
 aurex-settings (12.04.22) precise; urgency=low
 
   * Fix kill-gnome-screensaver desktop file

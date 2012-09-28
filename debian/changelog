@@ -1,3 +1,9 @@
+aurex-settings (12.04.26) precise; urgency=low
+
+  * Added diversion of /etc/default/apport to disable it
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 28 Sep 2012 19:04:00 +0200
+
 aurex-settings (12.04.25) precise; urgency=low
 
   * Fixed .gtk-bookmarks initialize script

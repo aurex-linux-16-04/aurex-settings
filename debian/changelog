@@ -1,3 +1,10 @@
+aurex-settings (12.04.29) precise; urgency=low
+
+  * Added aurex-ctrl-alt-del to replace xflock4 for
+    "ctrl alt del" shortcut
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 02 Oct 2012 12:30:49 +0200
+
 aurex-settings (12.04.28) precise; urgency=low
 
   * Hide leafpad

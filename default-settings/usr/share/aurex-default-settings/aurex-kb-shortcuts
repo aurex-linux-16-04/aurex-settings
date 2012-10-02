@@ -1,0 +1,11 @@
+#!/bin/sh
+[ "$HOME" -a -r $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ] || exit 0
+
+mkdir -p $HOME/.config/aurex
+
+if [ ! -r $HOME/.config/aurex/ctrl-alt-del.done ] ; then
+	sed -i -e "s%xflock4%aurex-ctrl-alt-del%g" "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" || true
+	dpkg -s aurex-default-settings |sed -ne "/^Version:/s%^.* %%p" > HOME/.config/aurex/ctrl-alt-del.done
+fi
+exit 0
+

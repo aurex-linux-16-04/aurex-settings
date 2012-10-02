@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=aurex keyboard shortcuts updater
+Comment=Update user's keyboard shortcurts
+Exec=/usr/share/aurex-default-settings/aurex-kb-shortcuts
+Type=Application
+OnlyShowIn=XFCE;
+StartupNotify=false

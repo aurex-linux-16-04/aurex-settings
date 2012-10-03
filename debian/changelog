@@ -1,3 +1,10 @@
+aurex-settings (12.04.30) precise; urgency=low
+
+  * Fixed a typo in aurex-kb-shortcuts (thanks to Valentin
+    <vlacuesta@ausiasmarch.net> for testing)
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 03 Oct 2012 18:21:59 +0200
+
 aurex-settings (12.04.29) precise; urgency=low
 
   * Added aurex-ctrl-alt-del to replace xflock4 for

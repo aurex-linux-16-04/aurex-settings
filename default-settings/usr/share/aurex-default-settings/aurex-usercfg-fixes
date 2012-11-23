@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/share/aurex-default-settings/aurex-kb-shortcuts || true
+/usr/share/aurex-default-settings/aurex-places-fix-config ||true

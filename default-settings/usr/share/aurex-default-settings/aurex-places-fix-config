@@ -1,0 +1,15 @@
+#!/bin/sh
+PANEL_CFG="$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml"
+OLD_LINE='^[[:blank:]]*<property name=.*[[:blank:]]value="places"/>'
+[ "$HOME" -a -r $PANEL_CFG ] || exit 0
+
+mkdir -p $HOME/.config/aurex
+
+if [ ! -r $HOME/.config/aurex/places.done ] && grep -qF '<property name="plugin-28" type="string" value="places"/>' $PANEL_CFG; then
+	TMP_FILE="$(tempfile)"
+	sed -e "\%$OLD_LINE%r/usr/share/aurex-default-settings/aurex-places.xml" $PANEL_CFG |sed -e "\%$OLD_LINE%s%/>%>%" > $TMP_FILE
+	cat $TMP_FILE > $PANEL_CFG
+	dpkg -s aurex-default-settings |sed -ne "/^Version:/s%^.* %%p" > $HOME/.config/aurex/places.done
+fi
+exit 0
+

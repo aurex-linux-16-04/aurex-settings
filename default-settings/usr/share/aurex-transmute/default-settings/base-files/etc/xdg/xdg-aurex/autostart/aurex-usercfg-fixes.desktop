@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=aurex user's configuration fixes
+Comment=Updates and fixes user's configuration after defaults has been released
+Exec=/usr/share/aurex-default-settings/aurex-usercfg-fixes
+Type=Application
+OnlyShowIn=XFCE;
+StartupNotify=false

@@ -111,7 +111,18 @@
       <property name="style" type="uint" value="1"/>
     </property>
     <property name="plugin-24" type="string" value="thunar-tpa"/>
-    <property name="plugin-28" type="string" value="places"/>
+    <property name="plugin-28" type="string" value="places">
+      <property name="show-button-type" type="int" value="2"/>
+      <property name="server-connect-cmd" type="string" value="nautilus-connect-server"/>
+      <property name="show-icons" type="bool" value="true"/>
+      <property name="show-volumes" type="bool" value="true"/>
+      <property name="mount-open-volumes" type="bool" value="false"/>
+      <property name="show-bookmarks" type="bool" value="true"/>
+      <property name="show-recent" type="bool" value="true"/>
+      <property name="show-recent-clear" type="bool" value="true"/>
+      <property name="show-recent-number" type="int" value="10"/>
+      <property name="network-cmd" type="string" value="=exo-open --launch FileManager network:///"/>
+    </property>
     <property name="plugin-29" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="1"/>

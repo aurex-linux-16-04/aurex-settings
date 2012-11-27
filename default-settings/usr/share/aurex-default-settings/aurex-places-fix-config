@@ -13,8 +13,8 @@ if [ ! -r $HOME/.config/aurex/places.done ] && grep -qF '<property name="plugin-
 	sed -e "\%$OLD_LINE%r/usr/share/aurex-default-settings/aurex-places.xml" $PANEL_CFG |sed -e "\%$OLD_LINE%s%/>%>%" > $TMP_FILE
 	cat $TMP_FILE > $PANEL_CFG
 	dpkg -s aurex-default-settings |sed -ne "/^Version:/s%^.* %%p" > $HOME/.config/aurex/places.done
-elif [ "$LAST_FIX" ] && [ $LAST_FIX -le 12.04.32 ] ; then
-	sed -i -e "s%=exo-open%exo-open" $PANEL_CFG
+elif [ "$LAST_FIX" ] && dpkg --compare-versions $LAST_FIX le 12.04.33 ; then
+	sed -i -e "s%=exo-open%exo-open%" $PANEL_CFG
 	dpkg -s aurex-default-settings |sed -ne "/^Version:/s%^.* %%p" > $HOME/.config/aurex/places.done
 fi
 exit 0

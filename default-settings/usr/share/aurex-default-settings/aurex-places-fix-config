@@ -5,17 +5,16 @@ OLD_LINE='^[[:blank:]]*<property name=.*[[:blank:]]value="places"/>'
 
 mkdir -p $HOME/.config/aurex
 
-NEED_TO_FIX="Y"
 if [ -r $HOME/.config/aurex/places.done ] ; then
 	LAST_FIX="$(cat $HOME/.config/aurex/places.done)"
-	if dpkg --compare-versions $LAST_FIX ge 12.04.32 ; then
-		NEED_TO_FIX=""
-	fi
 fi
-if [ "$NEED_TO_FIX" ] && grep -qF '<property name="plugin-28" type="string" value="places"/>' $PANEL_CFG; then
+if [ ! -r $HOME/.config/aurex/places.done ] && grep -qF '<property name="plugin-28" type="string" value="places"/>' $PANEL_CFG; then
 	TMP_FILE="$(tempfile)"
 	sed -e "\%$OLD_LINE%r/usr/share/aurex-default-settings/aurex-places.xml" $PANEL_CFG |sed -e "\%$OLD_LINE%s%/>%>%" > $TMP_FILE
 	cat $TMP_FILE > $PANEL_CFG
+	dpkg -s aurex-default-settings |sed -ne "/^Version:/s%^.* %%p" > $HOME/.config/aurex/places.done
+elif [ "$LAST_FIX" ] && [ $LAST_FIX -le 12.04.32 ] ; then
+	sed -i -e "s%=exo-open%exo-open" $PANEL_CFG
 	dpkg -s aurex-default-settings |sed -ne "/^Version:/s%^.* %%p" > $HOME/.config/aurex/places.done
 fi
 exit 0

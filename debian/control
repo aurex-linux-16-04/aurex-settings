@@ -34,8 +34,8 @@ Package: aurex-default-associations
 Architecture: all
 Depends: ${misc:Depends}
 Provides: aurex-associations
-Conflicts: aurex-associations
 Replaces: aurex-associations
+Conflicts: aurex-associations, aurex-default-settings (<=12.04.35)
 Description: helpers an file type associations for aurex 12.04
  Set default helpers and file type associations for aurex 12.04
 
@@ -43,8 +43,8 @@ Package: aurex-fatcli-associations
 Architecture: all
 Depends: ${misc:Depends}
 Provides: aurex-associations
-Conflicts: aurex-associations
 Replaces: aurex-associations
+Conflicts: aurex-associations, aurex-default-settings (<=12.04.35)
 Description: helpers an file type associations for aurex 12.04 fat clients
  Set default helpers and file type associations for aurex 12.04 fat clients
 

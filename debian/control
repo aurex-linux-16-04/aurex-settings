@@ -27,6 +27,7 @@ Description: Hide gnome and xfce default screenshot applications
 Package: aurex-fatcli-settings
 Architecture: all
 Depends: ${misc:Depends}, aurex-fatcli-associations, aurex-default-settings
+Recommends: chromium-browser, chromium-browser-l10n
 Conflicts: network-manager, blueman
 Description: fat client settings for aurex 12.04 
  This package contains the required settings for aurex 12.04 live desktop

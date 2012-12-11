@@ -1,12 +1,11 @@
 #!/bin/sh
 [ -r $HOME/.config/user-dirs.dirs ] || exit 0
 
+TOKEN_FILE="$HOME/.config/aurex/gtk-bookmarks.done"
 GT_BM_FILE="$HOME/.gtk-bookmarks"
 
-[ "$1" != "--force" ] || rm -f $GT_BM_FILE
-if [ -e "$GT_BM_FILE" ] && [ -s "$GT_BM_FILE" ] ; then
-	exit 0
-fi
+[ "$1" != "--force" ] || rm -f $GT_BM_FILE $TOKEN_FILE
+[ ! -e "$TOKEN_FILE=" ] || exit 0
 
 . $HOME/.config/user-dirs.dirs
 BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XDG_DOWNLOAD_DIR"
@@ -14,8 +13,10 @@ BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XD
 # TODO: Find a better way to do this task ...
 BM_LIST="$BM_LIST $HOME/MisDocumentos_Servidor $HOME/Publico_Servidor $HOME/Departamentos"
 
+:> $GT_BM_FILE
 for b in $BM_LIST ; do
 	[ ! -d "$b" ] || echo "file://$b" >> $GT_BM_FILE
 done
+touch $TOKEN_FILE
 exit 0
 

@@ -1,3 +1,9 @@
+aurex-settings (12.04.39) precise; urgency=low
+
+  * Updated aurex-gtk-bookmarks-init
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 11 Dec 2012 11:54:56 +0100
+
 aurex-settings (12.04.38) precise; urgency=low
 
   * Set debian-sensible-browser as default browser for fat clients instead

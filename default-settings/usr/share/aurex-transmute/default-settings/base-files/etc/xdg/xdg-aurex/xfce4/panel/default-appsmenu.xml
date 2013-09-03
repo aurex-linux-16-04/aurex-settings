@@ -7,7 +7,7 @@
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="40"/>
+        <value type="int" value="1"/>
         <value type="int" value="3"/>
         <value type="int" value="28"/>
         <value type="int" value="2"/>
@@ -54,7 +54,11 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-40" type="string" value="whiskermenu"/>
+    <property name="plugin-1" type="string" value="applicationsmenu">
+      <property name="show-tooltips" type="bool" value="true"/>
+      <property name="button-icon" type="string" value="xubuntu-logo-menu"/>
+      <property name="show-button-title" type="bool" value="false"/>
+    </property>
     <property name="plugin-2" type="string" value="applicationsmenu">
       <property name="show-tooltips" type="bool" value="true"/>
       <property name="button-icon" type="string" value="applications-system"/>

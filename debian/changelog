@@ -1,8 +1,10 @@
 aurex-settings (12.04.40) precise; urgency=low
 
   * Use inkscape as default application for svg files
+  * Whisker menu to replace xfce standard applications menu
+  * Added keyboard shortcut for Whisker menu
 
- -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 03 Sep 2013 11:41:08 +0200
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 03 Sep 2013 16:54:03 +0200
 
 aurex-settings (12.04.39) precise; urgency=low
 

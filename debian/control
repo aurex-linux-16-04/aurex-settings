@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), aurex-default-associations | aurex-associations
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations | aurex-associations
 Recommends: xfce4-utils, nautilus, gnome-terminal, firefox, vlc, gthumb, rhythmbox
 Description: default settings for the aurex 12.04 desktop
  This package contains the default settings used by aurex 12.04.

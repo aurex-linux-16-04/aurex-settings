@@ -6,7 +6,7 @@ launcher-show-description=true
 hover-switch-category=true
 category-icon-size=1
 item-icon-size=1
-favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-web-browser.desktop,libreoffice-startcenter.desktop
-menu-width=565
-menu-height=435
+favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-web-browser.desktop,libreoffice-startcenter.desktop,vlc.desktop
+menu-width=477
+menu-height=516
 

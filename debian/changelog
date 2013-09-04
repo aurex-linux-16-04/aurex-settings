@@ -1,3 +1,14 @@
+aurex-settings (12.04.41) precise; urgency=low
+
+  * Retain the applications menu configuration (plugin-1) in xfce panel
+    configuration. The plugin is disabled, but the configuration remains, so
+    it's easy to "toggle" programatically between whisker and standard
+    applications menu
+  * Added an autostart script to migrate panel configuration of current users
+  * TODO: add whisker menu keyboard shortcut to current users
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 04 Sep 2013 02:29:55 +0200
+
 aurex-settings (12.04.40) precise; urgency=low
 
   * Use inkscape as default application for svg files

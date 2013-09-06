@@ -1,3 +1,10 @@
+aurex-settings (12.04.42) precise; urgency=low
+
+  * New binary packages aurex-{}-boot-settings
+  * Updated desktop files for Oracle-java7 apps
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 06 Sep 2013 17:24:59 +0200
+
 aurex-settings (12.04.41) precise; urgency=low
 
   * Retain the applications menu configuration (plugin-1) in xfce panel

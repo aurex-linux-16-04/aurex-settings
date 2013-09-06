@@ -50,3 +50,12 @@ Conflicts: aurex-associations, aurex-default-settings (<=12.04.35)
 Description: helpers an file type associations for aurex 12.04 fat clients
  Set default helpers and file type associations for aurex 12.04 fat clients
 
+Package: aurex-default-boot-settings
+Architecture: all
+Depends: ${misc:Depends}
+Provides: aurex-boot-settings
+Replaces: aurex-boot-settings
+Conflicts: aurex-boot-settings
+Description: Defaults settings for the boot process
+ Default configuration for aurex boot process
+

@@ -3,8 +3,9 @@ aurex-settings (12.04.42) precise; urgency=low
   * New binary packages aurex-{}-boot-settings
   * Updated desktop files for Oracle-java7 apps
   * Updated desktop files for gnome-system-log and gdebi
+  * Changed depends in mdm-theme for lightdm-theme
 
- -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 06 Sep 2013 17:24:59 +0200
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Sat, 07 Sep 2013 02:52:38 +0200
 
 aurex-settings (12.04.41) precise; urgency=low
 

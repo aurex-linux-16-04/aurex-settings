@@ -1,0 +1,17 @@
+[Desktop Entry]
+NotShowIn=XFCE;
+Name=Bluetooth
+Comment=Configure Bluetooth settings
+Icon=bluetooth
+Exec=gnome-control-center bluetooth
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;;X-XFCE-HardwareSettings;
+OnlyShowIn=GNOME;XFCE;Unity;
+StartupNotify=true
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-bluetooth
+X-GNOME-Bugzilla-Component=properties
+X-GNOME-Bugzilla-Version=3.2.2
+X-GNOME-Settings-Panel=bluetooth
+X-Ubuntu-Gettext-Domain=gnome-bluetooth2

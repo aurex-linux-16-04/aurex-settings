@@ -1,3 +1,11 @@
+aurex-settings (12.04.43) precise; urgency=low
+
+  * Integrate system and settings menu categories to the standard applications
+    menu and remove 'System Menu icon' from panel (bye bye Gnome 2 look ...)
+  * Updated some desktops of 'settings' category
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 09 Sep 2013 08:51:29 +0200
+
 aurex-settings (12.04.42) precise; urgency=low
 
   * New binary packages aurex-{}-boot-settings

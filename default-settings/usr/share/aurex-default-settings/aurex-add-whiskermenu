@@ -6,8 +6,12 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-40 -n -t string -s "whiskermenu"
 # copy default configuration if not exists
 [ -r "$HOME/.config/xfce4/panel/whiskermenu-40.rc" ] ||  cp /etc/xdg/xdg-aurex/xfce4/panel/whiskermenu-40.rc .config/xfce4/panel/
 
-# get array of plugins and replace 1 with 40 and add '-s' option to each element for 
-PLUGINS_ARRAY="$(xfconf-query -c xfce4-panel -p /panels/panel-0/plugin-ids |sed -ne  "/^[[:digit:]]/{/^1$/s%1%40%;s%^%-s %;p}" |tr "\n" " ")"
+# get array of plugins and:
+# 	- replace 1 with 40
+#	- remove plugin '2'
+#	- add '-s' option to each element ('--set' option)
+
+PLUGINS_ARRAY="$(xfconf-query -c xfce4-panel -p /panels/panel-0/plugin-ids |sed -ne  "/^[[:digit:]]/{/^1$/s%1%40%;/^2$/d;s%^%-s %;p}" |tr "\n" " ")"
 
 #replace array
 xfconf-query -c xfce4-panel -p /panels/panel-0/plugin-ids $PLUGINS_ARRAY

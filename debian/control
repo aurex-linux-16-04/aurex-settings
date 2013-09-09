@@ -50,12 +50,22 @@ Conflicts: aurex-associations, aurex-default-settings (<=12.04.35)
 Description: helpers an file type associations for aurex 12.04 fat clients
  Set default helpers and file type associations for aurex 12.04 fat clients
 
-Package: aurex-default-boot-settings
+Package: aurex-nice-boot-settings
 Architecture: all
 Depends: ${misc:Depends}
 Provides: aurex-boot-settings
 Replaces: aurex-boot-settings
-Conflicts: aurex-boot-settings
+Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
 Description: Defaults settings for the boot process
  Default configuration for aurex boot process
+
+Package: aurex-ugly-boot-settings
+Architecture: all
+Depends: ${misc:Depends}
+Provides: aurex-boot-settings
+Replaces: aurex-boot-settings
+Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
+Description: Ugly settings for the boot process
+ Ugly configuration for aurex boot process when grub
+ refuses to show 
 

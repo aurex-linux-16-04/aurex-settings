@@ -4,4 +4,5 @@ if  [ ! -r "$HOME/.config/xfce4/panel/whiskermenu-40.rc" ]; then
 	/usr/share/aurex-default-settings/aurex-places-fix-config ||true
 	/usr/share/aurex-default-settings/aurex-add-whiskermenu  || true
 fi
+[ -r "$HOME/.config/aurex/system-menu.done" ] || /usr/share/aurex-default-settings/aurex-remove-system-menu  || true
 

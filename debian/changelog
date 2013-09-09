@@ -1,3 +1,10 @@
+aurex-settings (12.04.45) precise; urgency=low
+
+  * split whiskermenu and system menu scripts 
+  * New binary packages aurex-{}-boot-settings
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 09 Sep 2013 16:32:50 +0200
+
 aurex-settings (12.04.44) precise; urgency=low
 
   * Replace system menu with a separator when updating user configuration
@@ -14,7 +21,6 @@ aurex-settings (12.04.43) precise; urgency=low
 
 aurex-settings (12.04.42) precise; urgency=low
 
-  * New binary packages aurex-{}-boot-settings
   * Updated desktop files for Oracle-java7 apps
   * Updated desktop files for gnome-system-log and gdebi
   * Changed depends in mdm-theme for lightdm-theme

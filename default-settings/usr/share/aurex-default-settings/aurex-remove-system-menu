@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# get array of plugins and:
+#	- replace 2 with 3 (separator)
+#	- add '-s' option to each element ('--set' option)
+
+PLUGINS_ARRAY="$(xfconf-query -c xfce4-panel -p /panels/panel-0/plugin-ids |sed -ne  "/^[[:digit:]]/{/^2$/s%2%3%;s%^%-s %;p}" |tr "\n" " ")"
+
+#replace array
+xfconf-query -c xfce4-panel -p /panels/panel-0/plugin-ids $PLUGINS_ARRAY
+
+# restart panel
+xfce4-panel -r
+echo "1" > "$HOME/.config/aurex/system-menu.done"
+

@@ -1,3 +1,9 @@
+aurex-settings (12.04.46) precise; urgency=low
+
+  * New binary aurex-awful-boot-setings
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 10 Sep 2013 23:29:59 +0200
+
 aurex-settings (12.04.45) precise; urgency=low
 
   * split whiskermenu and system menu scripts 

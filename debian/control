@@ -52,7 +52,7 @@ Description: helpers an file type associations for aurex 12.04 fat clients
 
 Package: aurex-nice-boot-settings
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, grub-pc
 Provides: aurex-boot-settings
 Replaces: aurex-boot-settings
 Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
@@ -61,11 +61,21 @@ Description: Defaults settings for the boot process
 
 Package: aurex-ugly-boot-settings
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, grub-pc
 Provides: aurex-boot-settings
 Replaces: aurex-boot-settings
 Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
 Description: Ugly settings for the boot process
- Ugly configuration for aurex boot process when grub
- refuses to show 
+ Ugly configuration for aurex boot process for conflictive
+ displays that refuse to show grub menu
+
+Package: aurex-awful-boot-settings
+Architecture: all
+Depends: ${misc:Depends}, grub-pc, aurex-plymouth-theme
+Provides: aurex-boot-settings
+Replaces: aurex-boot-settings
+Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
+Description: awful settings for the boot process
+ awful configuration for aurex boot process for completely
+ broken displays that refuse to show either grub or plymouth
 

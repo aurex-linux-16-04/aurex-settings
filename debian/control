@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations | aurex-associations
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations | aurex-associations, aurex-gtk-bookmarks-settings
 Recommends: xfce4-utils, nautilus, gnome-terminal, firefox, vlc, gthumb, rhythmbox
 Description: default settings for the aurex 12.04 desktop
  This package contains the default settings used by aurex 12.04.
@@ -78,4 +78,12 @@ Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
 Description: awful settings for the boot process
  awful configuration for aurex boot process for completely
  broken displays that refuse to show either grub or plymouth
+
+Package: aurex-gtk-bookmarks-settings
+Architecture: all
+Depends: ${misc:Depends}, aurex-transmute (>=0.26)
+Conflicts: aurex-default-settings (<=12.04.47)
+Description: configure users gtk-bookmarks
+ tools to manage gtk-bookmarks in aurex environments
+
 

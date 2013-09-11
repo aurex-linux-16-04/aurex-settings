@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=aurex default gtk-bookmarks
 Comment=Initialize user's .gtk-bookmarks file
-Exec=/usr/share/aurex-default-settings/aurex-gtk-bookmarks-init
+Exec=/usr/share/aurex-gtk-bookmarks-settings/aurex-gtk-bookmarks-init
 Type=Application
 OnlyShowIn=XFCE;
 StartupNotify=false

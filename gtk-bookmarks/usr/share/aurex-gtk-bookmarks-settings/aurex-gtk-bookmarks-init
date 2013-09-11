@@ -1,22 +1,39 @@
 #!/bin/sh
 [ -r $HOME/.config/user-dirs.dirs ] || exit 0
 
-TOKEN_FILE="$HOME/.config/aurex/gtk-bookmarks-2.done"
+TOKEN_FILE="$HOME/.config/aurex/gtk-bookmarks-init.done"
+TOKEN_DIR="$HOME/.config/aurex/gtk-bookmarks"
 GT_BM_FILE="$HOME/.gtk-bookmarks"
 
 [ "$1" != "--force" ] || rm -f $GT_BM_FILE $TOKEN_FILE
-[ ! -e "$TOKEN_FILE=" ] || exit 0
+if [ ! -e "$TOKEN_FILE=" ] ; then
+	:> $GT_BM_FILE
+	touch $TOKEN_FILE
+	rm -fr "$TOKEN_DIR"
+fi
+
+mkdir -p "$TOKEN_DIR"
 
 . $HOME/.config/user-dirs.dirs
 BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XDG_DOWNLOAD_DIR"
+D="/etc/aurex-gtk-bookmarks/conf.d/"
+if [ -d "$D" ]; then
+	for f in $D/* ; do
+		if [ -r "$f" ] ; then
+			. $f
+			BM_LIST="$BM_LIST $BOOKMARKS"
+		fi
+	done
+fi
 
-# TODO: Find a better way to do this task ...
-BM_LIST="$BM_LIST $HOME/MisDocumentos_Servidor $HOME/Publico_Servidor $HOME/Departamentos $HOME/msdn /datos/isos"
 
-:> $GT_BM_FILE
 for b in $BM_LIST ; do
-	[ ! -d "$b" ] || echo "file://$b" >> $GT_BM_FILE
+	d="$(echo "$b" |sed -e "s%//%/%g;s%/$%%")"
+	B="$(echo "$d" |sed -e "s%/%__%g").done"
+	if [ ! -r "$TOKEN_DIR/$B" ] && [ -d "$d" ] ; then
+		echo "file://$d" >> $GT_BM_FILE
+		touch  "$TOKEN_DIR/$B"
+	fi
 done
-touch $TOKEN_FILE
 exit 0
 

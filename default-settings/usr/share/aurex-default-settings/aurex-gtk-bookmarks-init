@@ -1,7 +1,7 @@
 #!/bin/sh
 [ -r $HOME/.config/user-dirs.dirs ] || exit 0
 
-TOKEN_FILE="$HOME/.config/aurex/gtk-bookmarks.done"
+TOKEN_FILE="$HOME/.config/aurex/gtk-bookmarks-2.done"
 GT_BM_FILE="$HOME/.gtk-bookmarks"
 
 [ "$1" != "--force" ] || rm -f $GT_BM_FILE $TOKEN_FILE
@@ -11,7 +11,7 @@ GT_BM_FILE="$HOME/.gtk-bookmarks"
 BM_LIST="$XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR $XDG_PICTURES_DIR $XDG_VIDEOS_DIR $XDG_DOWNLOAD_DIR"
 
 # TODO: Find a better way to do this task ...
-BM_LIST="$BM_LIST $HOME/MisDocumentos_Servidor $HOME/Publico_Servidor $HOME/Departamentos"
+BM_LIST="$BM_LIST $HOME/MisDocumentos_Servidor $HOME/Publico_Servidor $HOME/Departamentos $HOME/msdn /datos/isos"
 
 :> $GT_BM_FILE
 for b in $BM_LIST ; do

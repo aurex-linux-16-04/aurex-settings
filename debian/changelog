@@ -1,3 +1,9 @@
+aurex-settings (12.04.47) precise; urgency=low
+
+  * Added 'msdn' and 'isos' directories to gtk-bookmarks
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 11 Sep 2013 02:08:24 +0200
+
 aurex-settings (12.04.46) precise; urgency=low
 
   * New binary aurex-awful-boot-setings

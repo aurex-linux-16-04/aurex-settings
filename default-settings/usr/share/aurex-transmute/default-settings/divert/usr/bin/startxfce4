@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+#  aurex simple startxfce4 wrapper to get .profile loaded
+
+if [ -r "$HOME/.profile" ] ; then
+        . "$HOME/.profile"
+fi
+exec "$0.aurex-divert" "$@"

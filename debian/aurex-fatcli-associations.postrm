@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+aurex-update-associations || true
+
+#DEBHELPER#
+
+exit 0
+
+

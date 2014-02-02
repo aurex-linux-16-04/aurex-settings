@@ -1,0 +1,44 @@
+#!/bin/sh
+# -------
+# File:        aurex-update-associations
+# Description: generate /usr/share/aurex/applications/defaults.list from multiples files
+# Author:      Luis Antonio Garcia Gisbert <luisgg@gmail.com> 
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along 
+# with this program; if not, write to the Free Software Foundation, Inc., 
+# 51 Franklin St, Fifth Floor, Boston MA 02110-1301 USA
+# --------
+
+# vars
+# ----
+SOURCE_DIR="/usr/share/aurex-default-associations/update.d"
+DEFAULT_FILE="/usr/share/aurex-default-associations/defaults.list"
+TARGET_FILE="/usr/share/aurex/applications/defaults.list"
+
+TMP_FILE="$(tempfile)"
+cat "$DEFAULT_FILE" >  "$TMP_FILE"
+ls -1 "$SOURCE_DIR" |sort |while read f; do
+	for MTYPE in $(sed -ne "/^.*=/{s%=.*$%%;p}" "$SOURCE_DIR/$f") ; do
+		if grep -q -F "$MTYPE" "$TMP_FILE" ; then
+			sed -i -e "\#^${MTYPE}=#s%^.*$%$(grep -F "$MTYPE" "$SOURCE_DIR/$f")%" "$TMP_FILE"
+		else
+			grep -F "$MTYPE" "$SOURCE_DIR/$f" >> "$TMP_FILE"
+		fi
+	done
+done
+
+mv "$TMP_FILE" "$TARGET_FILE" 
+chmod 644 "$TARGET_FILE"
+
+update-desktop-database || true
+exit 0

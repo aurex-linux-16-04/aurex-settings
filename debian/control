@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations | aurex-associations, aurex-gtk-bookmarks-settings, xfce4-session
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations, aurex-gtk-bookmarks-settings, xfce4-session
 Recommends: xfce4-utils, nautilus, gnome-terminal, firefox, vlc, gthumb, rhythmbox
 Description: default settings for the aurex 12.04 desktop
  This package contains the default settings used by aurex 12.04.
@@ -34,20 +34,16 @@ Description: fat client settings for aurex 12.04
 
 Package: aurex-default-associations
 Architecture: all
-Depends: ${misc:Depends}
-Provides: aurex-associations
-Replaces: aurex-associations
-Conflicts: aurex-associations, aurex-default-settings (<=12.04.35)
-Description: helpers an file type associations for aurex 12.04
+Depends: ${misc:Depends}, desktop-file-utils
+Conflicts: aurex-default-settings (<=12.04.35)
+Description: helpers and file type associations for aurex 12.04
  Set default helpers and file type associations for aurex 12.04
 
 Package: aurex-fatcli-associations
 Architecture: all
-Depends: ${misc:Depends}
-Provides: aurex-associations
-Replaces: aurex-associations
-Conflicts: aurex-associations, aurex-default-settings (<=12.04.35)
-Description: helpers an file type associations for aurex 12.04 fat clients
+Depends: ${misc:Depends}, aurex-default-associations (>= 12.04.51)
+Conflicts: aurex-default-settings (<=12.04.35)
+Description: helpers and file type associations for aurex 12.04 fat clients
  Set default helpers and file type associations for aurex 12.04 fat clients
 
 Package: aurex-nice-boot-settings

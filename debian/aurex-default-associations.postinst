@@ -2,7 +2,6 @@
 
 case "$1" in
     configure)
-	aurex-transmute --module=default-associations transmute || true
 	aurex-update-associations || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)

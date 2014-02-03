@@ -6,6 +6,7 @@ case "$1" in
 	if [ -r /usr/share/polkit-1/actions/com.ubuntu.usbcreator.policy ] ; then
 		sed -e "s%<allow_active>auth_admin_keep</allow_active>%<allow_active>yes</allow_active>%g" /usr/share/polkit-1/actions/com.ubuntu.usbcreator.policy > /var/lib/aurex-default-settings/com.ubuntu.usbcreator.policy
 	fi
+	aurex-transmute --module=default-settings transmute || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;

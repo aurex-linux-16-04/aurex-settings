@@ -19,7 +19,7 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-	aurex-transmute --module=default-associations untransmute || true
+	aurex-transmute --module=default-settings untransmute || true
     ;;
 
     failed-upgrade)

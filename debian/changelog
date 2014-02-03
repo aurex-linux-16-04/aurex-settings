@@ -1,3 +1,9 @@
+aurex-settings (12.04.52) precise; urgency=low
+
+  * Dummy upgrade
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 03 Feb 2014 01:32:41 +0100
+
 aurex-settings (12.04.51) precise; urgency=low
 
   * Added script aurex-update-associations to update system

@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-filesystem -s false || true
 xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-removable -s false || true
 xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-trash -s false || true

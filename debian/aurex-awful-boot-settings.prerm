@@ -20,6 +20,7 @@ set -e
 case "$1" in
     remove|upgrade|deconfigure)
 	aurex-transmute --module=boot-theme untransmute || true
+	update-grub || true
 	update-alternatives --remove default.plymouth /lib/plymouth/themes/aurex-text/text.plymouth
 	[ "$1" != "remove" ] || update-initramfs -u
     ;;

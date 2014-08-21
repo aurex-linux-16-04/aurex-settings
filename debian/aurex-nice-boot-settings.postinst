@@ -2,8 +2,8 @@
 
 case "$1" in
     configure)
-	aurex-transmute --module=fatcli-associations transmute || true
-	aurex-update-associations || true
+	aurex-transmute --module=boot-theme transmute || true
+	update-grub || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;

@@ -24,27 +24,12 @@ Depends: ${misc:Depends}, shutter
 Description: Hide gnome and xfce default screenshot applications
  Remove gnome and xfce screenshot tools from menu in presence of shutter.
 
-Package: aurex-fatcli-settings
-Architecture: all
-Depends: ${misc:Depends}, aurex-fatcli-associations, aurex-default-settings
-Recommends: chromium-browser, chromium-browser-l10n
-Conflicts: network-manager, blueman
-Description: fat client settings for aurex 12.04 
- This package contains the required settings for aurex 12.04 live desktop
-
 Package: aurex-default-associations
 Architecture: all
 Depends: ${misc:Depends}, desktop-file-utils
 Conflicts: aurex-default-settings (<=12.04.35)
 Description: helpers and file type associations for aurex 12.04
  Set default helpers and file type associations for aurex 12.04
-
-Package: aurex-fatcli-associations
-Architecture: all
-Depends: ${misc:Depends}, aurex-default-associations (>= 12.04.51)
-Conflicts: aurex-default-settings (<=12.04.35)
-Description: helpers and file type associations for aurex 12.04 fat clients
- Set default helpers and file type associations for aurex 12.04 fat clients
 
 Package: aurex-nice-boot-settings
 Architecture: all

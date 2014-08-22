@@ -1,3 +1,9 @@
+aurex-settings (14.04.1) trusty; urgency=medium
+
+  * Updated for trusty
+
+ -- lgarcia <lgarcia@aurex-trusty>  Fri, 22 Aug 2014 03:41:06 +0200
+
 aurex-settings (12.04.52) precise; urgency=low
 
   * Dummy upgrade

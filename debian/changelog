@@ -1,3 +1,9 @@
+aurex-settings (14.04.6) trusty; urgency=medium
+
+  * Fixed nemo helper path
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.co>  Mon, 25 Aug 2014 21:48:28 +0200
+
 aurex-settings (14.04.5) trusty; urgency=medium
 
   * Added XFCE helper information for nemo because is not

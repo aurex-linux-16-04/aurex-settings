@@ -1,3 +1,10 @@
+aurex-settings (14.04.5) trusty; urgency=medium
+
+  * Added XFCE helper information for nemo because is not
+    include in libexo-helpers package
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 25 Aug 2014 21:34:28 +0200
+
 aurex-settings (14.04.4) trusty; urgency=medium
 
   * Fixed desktop files for nemo file manager

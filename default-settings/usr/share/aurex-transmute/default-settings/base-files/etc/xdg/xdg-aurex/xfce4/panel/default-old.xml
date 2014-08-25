@@ -14,10 +14,12 @@
         <value type="int" value="32"/>
         <value type="int" value="34"/>
         <value type="int" value="29"/>
-        <value type="int" value="41"/>
-        <value type="int" value="51"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
         <value type="int" value="6"/>
-        <value type="int" value="71"/>
+        <value type="int" value="7"/>
+        <value type="int" value="27"/>
+        <value type="int" value="9"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
       <property name="background-alpha" type="uint" value="100"/>
@@ -77,26 +79,11 @@
         <value type="string" value="miniaplicación gestor de la red"/>
       </property>
     </property>
-    <property name="plugin-41" type="string" value="systray">
-      <property name="names-visible" type="empty"/>
-      <property name="show-frame" type="bool" value="false"/>
-      <property name="size-max" type="uint" value="22"/>
-    </property>
     <property name="plugin-5" type="string" value="indicator"/>
-    <property name="plugin-51" type="string" value="indicator">
-      <property name="blacklist" type="array">
-        <value type="string" value="libappmenu.so"/>
-      </property>
-    </property>
-
     <property name="plugin-6" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-7" type="string" value="datetime"/>
-    <property name="plugin-71" type="string" value="clock">
-      <property name="digital-format" type="string" value="%d %b, %H:%M"/>
-    </property>
-
     <property name="plugin-27" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>

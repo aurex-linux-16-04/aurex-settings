@@ -1,4 +1,4 @@
 WebBrowser=firefox
 MailReader=thunderbird
-FileManager=nautilus
+FileManager=nemo
 TerminalEmulator=gnome-terminal

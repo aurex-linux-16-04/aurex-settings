@@ -1,3 +1,9 @@
+aurex-settings (14.04.2) trusty; urgency=medium
+
+  * Replaced nautilus with nemo as filemanager
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 25 Aug 2014 13:46:52 +0200
+
 aurex-settings (14.04.1) trusty; urgency=medium
 
   * Updated for trusty

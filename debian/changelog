@@ -1,8 +1,14 @@
+aurex-settings (14.04.7) trusty; urgency=medium
+
+  * Enable command-switchuser in whiskermenu
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 25 Aug 2014 23:53:53 +0200
+
 aurex-settings (14.04.6) trusty; urgency=medium
 
   * Fixed nemo helper path
 
- -- Luis Antonio Garcia Gisbert <luisgg@gmail.co>  Mon, 25 Aug 2014 21:48:28 +0200
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 25 Aug 2014 21:48:28 +0200
 
 aurex-settings (14.04.5) trusty; urgency=medium
 

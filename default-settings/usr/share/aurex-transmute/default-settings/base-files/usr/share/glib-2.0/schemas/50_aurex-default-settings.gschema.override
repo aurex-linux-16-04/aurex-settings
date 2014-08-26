@@ -2,5 +2,9 @@
 interested-media-players=[ 'gmusicbrowser' ]
 show-notify-osd-on-scroll=false
 
-[com.ubuntu.update-notifier]
-auto-launch=false
+[com.canonical.indicator.datetime]
+show-date=true
+
+[com.canonical.indicator.power]
+show-percentage=true
+

@@ -17,8 +17,6 @@
         <value type="int" value="41"/>
         <value type="int" value="51"/>
         <value type="int" value="9"/>
-        <value type="int" value="6"/>
-        <value type="int" value="71"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
       <property name="background-alpha" type="uint" value="100"/>
@@ -87,7 +85,6 @@
     <property name="plugin-5" type="string" value="indicator"/>
     <property name="plugin-51" type="string" value="indicator">
       <property name="blacklist" type="array">
-        <value type="string" value="com.canonical.indicator.datetime"/>
         <value type="string" value="com.canonical.indicator.session"/>
         <value type="string" value="libappmenu.so"/>
       </property>

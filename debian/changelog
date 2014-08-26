@@ -1,7 +1,8 @@
 aurex-settings (14.04.9) trusty; urgency=medium
 
   * Added diversions for unity-control-center and gnome-control-center
-    because powermanager, sound and datetime indicators use that apps
+    to get more functionallity from power, sound and datetime indicators
+  * Add gsettings overrides for power and datetime indicators
 
  -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 27 Aug 2014 00:29:22 +0200
 

@@ -9,6 +9,4 @@ item-icon-size=1
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-web-browser.desktop,libreoffice-startcenter.desktop,vlc.desktop
 menu-width=477
 menu-height=516
-command-switchuser=dm-tool switch-to-greeter
-show-command-switchuser=true
 

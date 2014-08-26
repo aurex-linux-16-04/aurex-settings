@@ -1,6 +1,8 @@
 aurex-settings (14.04.7) trusty; urgency=medium
 
-  * Enable command-switchuser in whiskermenu
+  * Blacklisted indicator.session to remove from panel due to his erratic behaviour
+    Back to a more 'retro' look with an "action session menu" to allow lock screen,
+    and session close
 
  -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 25 Aug 2014 23:53:53 +0200
 

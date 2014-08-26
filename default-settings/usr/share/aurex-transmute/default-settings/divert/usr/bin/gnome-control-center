@@ -1,5 +1,5 @@
 #!/bin/sh
-ORIG_APP="$0.divert"
+ORIG_APP="$0.aurex-divert"
 
 if echo " $* " |grep -q " power " ; then
 	exec xfce4-power-manager-settings

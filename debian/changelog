@@ -1,3 +1,10 @@
+aurex-settings (14.04.8) trusty; urgency=medium
+
+  * Added powermanager and datetime indicators to blacklist to avoid duplicate
+    plugins in panel
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 26 Aug 2014 12:23:42 +0200
+
 aurex-settings (14.04.7) trusty; urgency=medium
 
   * Blacklisted indicator.session to remove from panel due to his erratic behaviour

@@ -1,0 +1,11 @@
+#!/bin/sh
+ORIG_APP="$0.divert"
+
+if echo " $* " |grep -q " power " ; then
+	exec xfce4-power-manager-settings
+elif echo " $* " |grep -q " sound " ; then
+	exec xfce4-mixer
+fi
+
+exec $ORIG_APP "$@"
+

@@ -75,6 +75,7 @@
       <property name="names-visible" type="array">
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="blueman-applet"/>
+        <value type="string" value="ibus panel"/>
         <value type="string" value="miniaplicación gestor de la red"/>
       </property>
     </property>
@@ -87,7 +88,6 @@
     <property name="plugin-51" type="string" value="indicator">
       <property name="blacklist" type="array">
         <value type="string" value="com.canonical.indicator.datetime"/>
-        <value type="string" value="com.canonical.indicator.power"/>
         <value type="string" value="com.canonical.indicator.session"/>
         <value type="string" value="libappmenu.so"/>
       </property>

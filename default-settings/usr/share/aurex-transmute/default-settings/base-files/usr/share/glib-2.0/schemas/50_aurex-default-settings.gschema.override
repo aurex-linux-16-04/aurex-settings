@@ -8,3 +8,6 @@ show-date=true
 [com.canonical.indicator.power]
 show-percentage=true
 
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/aurex/backdrops/aurex-color.png'
+

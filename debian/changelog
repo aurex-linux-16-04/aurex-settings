@@ -1,3 +1,10 @@
+aurex-settings (14.04.11) trusty; urgency=medium
+
+  * Change default background for gnome/unity to avoid
+    some syncing issues
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 01 Sep 2014 03:40:28 +0200
+
 aurex-settings (14.04.10) trusty; urgency=medium
 
   * Add configuration file to set aurex as default session in:

@@ -1,3 +1,9 @@
+aurex-settings (14.04.13) trusty urgency=medium
+
+  * Add manual login option
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 03 Sep 2014 15:36:35 +0200
+
 aurex-settings (14.04.12) trusty; urgency=medium
 
   * Replace xscreensaver with light-locker

@@ -1,3 +1,11 @@
+aurex-settings (14.04.14) trusty; urgency=medium
+
+  * Moved aurex-grub-theme binary package from aurex-artwork.
+    The package contains only grub configuration stuff, but
+    depends on aurex-boot-theme-graphics to install the artwork
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 05 Sep 2014 01:51:37 +0200
+
 aurex-settings (14.04.13) trusty; urgency=medium
 
   * Add manual login option

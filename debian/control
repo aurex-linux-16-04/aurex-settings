@@ -31,6 +31,12 @@ Conflicts: aurex-default-settings (<=12.04.35)
 Description: helpers and file type associations for aurex 12.04
  Set default helpers and file type associations for aurex 12.04
 
+Package: aurex-boot-theme
+Architecture: all
+Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-boot-theme-graphics, aurex-nice-boot-settings | aurex-boot-settings
+Description: Aurex 14.04 GRUB theme
+ AureX grub2 theme
+
 Package: aurex-nice-boot-settings
 Architecture: all
 Depends: ${misc:Depends}, grub-pc

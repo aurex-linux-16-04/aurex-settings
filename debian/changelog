@@ -1,3 +1,9 @@
+aurex-settings (14.04.15) trusty; urgency=medium
+
+  * aurex-boot-theme: install missing files
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 05 Sep 2014 14:17:29 +0200
+
 aurex-settings (14.04.14) trusty; urgency=medium
 
   * Moved aurex-grub-theme binary package from aurex-artwork.

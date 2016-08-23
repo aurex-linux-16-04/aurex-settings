@@ -7,16 +7,16 @@ Standards-Version: 3.8.4
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, fonts-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), light-locker, light-locker-settings, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations, aurex-gtk-bookmarks-settings, xfce4-session, xfce4-power-manager, xfce4-mixer, aurex-usb-power-fixes
-Recommends: xfce4-utils, nemo, gnome-terminal, firefox, vlc, gthumb, rhythmbox
-Description: default settings for the aurex 12.04 desktop
- This package contains the default settings used by aurex 12.04.
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, fonts-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=16.04.1), light-locker, light-locker-settings, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations, aurex-gtk-bookmarks-settings, xfce4-session, xfce4-power-manager, xfce4-mixer, aurex-usb-power-fixes
+Recommends: xfce4-utils, nemo, gnome-terminal, firefox, vlc, eog, rhythmbox
+Description: default settings for the aurex 16.04 desktop
+ This package contains the default settings used by aurex 16.04.
 
 Package: aurex-live-settings
 Architecture: all
 Depends: ${misc:Depends}, ubiquity, xfconf, casper
-Description: live session settings for aurex 12.04 
- This package contains the required settings for aurex 12.04 live desktop
+Description: live session settings for aurex 16.04 
+ This package contains the required settings for aurex 16.04 live desktop
 
 Package: aurex-screenshot-settings
 Architecture: all
@@ -27,14 +27,14 @@ Description: Hide gnome and xfce default screenshot applications
 Package: aurex-default-associations
 Architecture: all
 Depends: ${misc:Depends}, desktop-file-utils
-Conflicts: aurex-default-settings (<=12.04.35)
-Description: helpers and file type associations for aurex 12.04
- Set default helpers and file type associations for aurex 12.04
+Conflicts: aurex-default-settings (<=16.04.1)
+Description: helpers and file type associations for aurex 16.04
+ Set default helpers and file type associations for aurex 16.04
 
 Package: aurex-boot-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-boot-theme-graphics, aurex-nice-boot-settings | aurex-boot-settings
-Description: Aurex 14.04 GRUB theme
+Description: Aurex 16.04 GRUB theme
  AureX grub2 theme
 
 Package: aurex-nice-boot-settings
@@ -42,7 +42,7 @@ Architecture: all
 Depends: ${misc:Depends}, grub-pc
 Provides: aurex-boot-settings
 Replaces: aurex-boot-settings
-Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
+Conflicts: aurex-boot-settings, aurex-boot-theme (<=16.04.1)
 Description: Defaults settings for the boot process
  Default configuration for aurex boot process
 
@@ -51,7 +51,7 @@ Architecture: all
 Depends: ${misc:Depends}, grub-pc
 Provides: aurex-boot-settings
 Replaces: aurex-boot-settings
-Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
+Conflicts: aurex-boot-settings, aurex-boot-theme (<=16.04.1)
 Description: Ugly settings for the boot process
  Ugly configuration for aurex boot process for conflictive
  displays that refuse to show grub menu
@@ -61,7 +61,7 @@ Architecture: all
 Depends: ${misc:Depends}, grub-pc, aurex-plymouth-theme
 Provides: aurex-boot-settings
 Replaces: aurex-boot-settings
-Conflicts: aurex-boot-settings, aurex-boot-theme (<=12.04.37)
+Conflicts: aurex-boot-settings, aurex-boot-theme (<=16.04.1)
 Description: awful settings for the boot process
  awful configuration for aurex boot process for completely
  broken displays that refuse to show either grub or plymouth
@@ -69,7 +69,7 @@ Description: awful settings for the boot process
 Package: aurex-gtk-bookmarks-settings
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute (>=0.26)
-Conflicts: aurex-default-settings (<=12.04.47)
+Conflicts: aurex-default-settings (<=16.04.1)
 Description: configure users gtk-bookmarks
  tools to manage gtk-bookmarks in aurex environments
 

@@ -1,3 +1,9 @@
+aurex-settings (16.04.1) xenial; urgency=medium
+
+  * First xenial release
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 23 Aug 2016 18:54:15 +0200
+
 aurex-settings (14.04.15) trusty; urgency=medium
 
   * aurex-boot-theme: install missing files

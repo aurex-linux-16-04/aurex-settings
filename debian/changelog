@@ -1,3 +1,9 @@
+aurex-settings (16.04.3) xenial; urgency=medium
+
+  * Updated some depends to xenial 
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 26 Aug 2016 00:30:37 +0200
+
 aurex-settings (16.04.2) xenial; urgency=medium
 
   * Replaced firefox with chromium as default browser

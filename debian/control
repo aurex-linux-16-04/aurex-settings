@@ -8,7 +8,7 @@ Standards-Version: 3.8.4
 Package: aurex-default-settings
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, fonts-droid, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=16.04.1), light-locker, light-locker-settings, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations, aurex-gtk-bookmarks-settings, xfce4-session, xfce4-power-manager, xfce4-mixer, aurex-usb-power-fixes
-Recommends: xfce4-utils, nemo, gnome-terminal, firefox, vlc, eog, rhythmbox
+Recommends: xfce4-utils, nemo, gnome-terminal, chromium-browser, firefox, vlc, eog, rhythmbox
 Description: default settings for the aurex 16.04 desktop
  This package contains the default settings used by aurex 16.04.
 
@@ -33,7 +33,7 @@ Description: helpers and file type associations for aurex 16.04
 
 Package: aurex-boot-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-boot-theme-graphics, aurex-nice-boot-settings | aurex-boot-settings
+Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-boot-theme-graphics, aurex-nice-boot-settings | aurex-ugly-boot-settings | aurex-awful-boot-settings
 Description: Aurex 16.04 GRUB theme
  AureX grub2 theme
 

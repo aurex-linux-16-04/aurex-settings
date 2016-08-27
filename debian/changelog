@@ -1,3 +1,9 @@
+aurex-settings (16.04.4) xenial; urgency=medium
+
+  * Replace rhythmbox with parole as default audio player
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Sat, 27 Aug 2016 09:53:41 +0200
+
 aurex-settings (16.04.3) xenial; urgency=medium
 
   * Updated some depends to xenial 

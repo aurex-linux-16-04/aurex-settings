@@ -3,6 +3,7 @@
 case "$1" in
     configure)
 	aurex-transmute --module=boot-theme transmute || true
+	update-alternatives --install /usr/share/images/desktop-base/desktop-grub.png desktop-grub /usr/share/images/desktop-base/aurex-grub.png 116
 	update-grub || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
@@ -20,4 +21,3 @@ esac
 #DEBHELPER#
 
 exit 0
-

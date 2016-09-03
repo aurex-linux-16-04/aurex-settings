@@ -28,10 +28,19 @@ get_xfce_wallpaper(){
 	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path
 }
 
+list_xfce_wallpapers(){
+	#xfconf-query -l -c xfce4-desktop |grep "^\/backdrop\/screen.\/monitor.\/image\-path"
+	xfconf-query -l -c xfce4-desktop |grep "^\/backdrop\/screen.\/monitor.\/workspace.\/last\-image"
+}
+
 set_xfce_wallpaper(){
 	BG_FILE=${1#\'file://}
 	BG_FILE="${BG_FILE%\'}"
-	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "$BG_FILE"
+#	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "$BG_FILE"
+	
+	for w in $(list_xfce_wallpapers) ; do
+		xfconf-query -c xfce4-desktop -p "$w" -s "$BG_FILE"
+	done
 }
 
 # main

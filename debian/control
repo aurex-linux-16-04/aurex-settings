@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, fonts-droid-fallback, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=16.04.1), light-locker, light-locker-settings, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations, aurex-gtk-bookmarks-settings, xfce4-session, xfce4-power-manager, xfce4-volumed, aurex-usb-power-fixes
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), dconf-gsettings-backend | gsettings-backend, gconf2, fonts-droid-fallback, x11-common, aurex-lightdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=16.04.1), light-locker, light-locker-settings, libglib2.0-bin, xfconf, usb-creator-common, aurex-ctrl-alt-del, xfce4-places-plugin (>=1.5.0-0ubuntu1~ppa0.12.04.1), xfce4-whiskermenu-plugin, aurex-default-associations, aurex-gtk-bookmarks-settings, xfce4-session, xfce4-power-manager, xfce4-volumed, aurex-usb-power-fixes, libreoffice-locking-fix
 Recommends: nemo, gnome-terminal, chromium-browser, firefox, vlc, eog, parole
 Description: default settings for the aurex 16.04 desktop
  This package contains the default settings used by aurex 16.04.
@@ -73,4 +73,9 @@ Conflicts: aurex-default-settings (<=16.04.1)
 Description: configure users gtk-bookmarks
  tools to manage gtk-bookmarks in aurex environments
 
+Package: libreoffice-locking-fix
+Architecture: all
+Depends: ${misc:Depends}, aurex-transmute (>=0.26)
+Description: Disable file locking in libreoffice
+ Disable file locking to allow file edition in shared folders
 

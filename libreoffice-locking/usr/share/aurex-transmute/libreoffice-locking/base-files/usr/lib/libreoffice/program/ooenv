@@ -1,0 +1,1 @@
+export SAL_ENABLE_FILE_LOCKING=0 

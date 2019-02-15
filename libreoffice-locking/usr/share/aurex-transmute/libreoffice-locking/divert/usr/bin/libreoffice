@@ -1,0 +1,41 @@
+#!/bin/sh
+
+DIVERTED_FILE="${0}.aurex-divert"
+CURRENT_VERSION="1"
+REQUIRED_VERSION="1"
+INSTALLED_VERSION=""
+
+FLAG_FILE="$HOME/.config/soulmate/libreoffice-locking.done"
+XCU_FILE=".config/libreoffice/4/user/registrymodifications.xcu"
+USER_XCU="$HOME/$XCU_FILE"
+SKEL_XCU="/etc/skel/$XCU_FILE"
+
+PROP_LIST="UseDocumentOOoLockFile UseDocumentSystemFileLocking UseLocking"
+
+[ ! -e "$FLAG_FILE" ] || INSTALLED_VERSION="$(head -1 $FLAG_FILE |grep "^[[:digit:]]\+$")"
+if [ -z "$INSTALLED_VERSION" ] || [ $INSTALLED_VERSION -lt $REQUIRED_VERSION ] ; then
+	if [ ! -e "$USER_XCU" ] ; then
+		mkdir -p "$(dirname "$USER_XCU")"
+		cp $SKEL_XCU $USER_XCU
+	else
+		TMP_FILE="$(tempfile)"
+		# remove last line
+		sed -e "\$d" "$USER_XCU" > $TMP_FILE
+		for p in $PROP_LIST; do
+			# remove current prop line if exist
+			sed -i -e "/<prop oor:name=\"${p}\"/d" $TMP_FILE
+			# add the correct one
+			sed -ne "/<prop oor:name=\"${p}\"/p" "$SKEL_XCU" >> $TMP_FILE
+		done
+		# add last line
+		sed -ne "\$p" "$USER_XCU" >> $TMP_FILE
+		# override users file, remove tempfile, and write flag
+		cat $TMP_FILE > "$USER_XCU"
+		rm -f $TMP_FILE
+		mkdir -p "$(dirname "$FLAG_FILE")"
+		echo "$CURRENT_VERSION" > "$FLAG_FILE"
+	fi
+fi
+
+exec "$DIVERTED_FILE" "$@"
+

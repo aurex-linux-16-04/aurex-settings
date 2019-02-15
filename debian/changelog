@@ -1,3 +1,11 @@
+aurex-settings (16.04.15) xenial; urgency=medium
+
+  * libreoffice-locking-fix: Override file locking settings in user
+    configuration. The package now includes an skel file and a 'wrapper'
+    to '/usr/bin/libreoffice'
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 15 Feb 2019 13:11:16 +0100
+
 aurex-settings (16.04.14ubuntu1) xenial; urgency=medium
 
   * Added libreoffice-locking-fix binary package

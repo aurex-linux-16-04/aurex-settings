@@ -75,7 +75,7 @@ Description: configure users gtk-bookmarks
 
 Package: libreoffice-locking-fix
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute (>=0.26)
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), libreoffice-common
 Description: Disable file locking in libreoffice
  Disable file locking to allow file edition in shared folders
 

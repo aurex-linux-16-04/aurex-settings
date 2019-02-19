@@ -1,3 +1,10 @@
+aurex-settings (16.04.16) xenial; urgency=medium
+
+  * libreoffice-locking-fix renamed to aurex-libreoffice-locking-fix to
+    avoid conflicts with soulmate versions
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 19 Feb 2019 18:24:22 +0100
+
 aurex-settings (16.04.15) xenial; urgency=medium
 
   * libreoffice-locking-fix: Override file locking settings in user

@@ -73,7 +73,7 @@ Conflicts: aurex-default-settings (<=16.04.1)
 Description: configure users gtk-bookmarks
  tools to manage gtk-bookmarks in aurex environments
 
-Package: libreoffice-locking-fix
+Package: aurex-libreoffice-locking-fix
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute (>=0.26), libreoffice-common
 Description: Disable file locking in libreoffice
